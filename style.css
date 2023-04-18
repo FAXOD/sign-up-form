@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+}
+
+#lhs {
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    width: 34.5vw;
+}
+
+#rhs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+}
+
+p:first-of-type {
+    margin-left: 5vw;
+    width: 45vw;
+}
+
+form {
+    background-color: white;
+    width:60.5vw;
+    height:30vh;
+    background-color: aqua;
+    padding-left: 5vw;
+}
+
+#btn-footer {
+    margin-left: 5vw;
+}
+
+label {
+
+}
