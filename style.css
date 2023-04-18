@@ -1,3 +1,7 @@
+:root {
+    --accent-colour: rgba(169, 206, 255, 0.795);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -19,23 +23,101 @@ body {
     font-size: 1.4rem;
 }
 
-p:first-of-type {
+#top-text {
     margin-left: 5vw;
     width: 45vw;
+    font-size: 1.6rem;
+    flex-grow: 1;
+    display:flex;
+    align-items: center;
 }
 
 form {
     background-color: white;
     width:60.5vw;
-    height:30vh;
-    background-color: aqua;
+    height:40vh;
+    background-color: var(--accent-colour);
     padding-left: 5vw;
+    padding-bottom: 2vh;
 }
 
 #btn-footer {
     margin-left: 5vw;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 2rem;
+}
+
+input {
+    margin: 0;
+    height: 2rem;
+    width: 16rem;
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+    border: solid 1px black;
+    display: block;
+    margin-right: 4rem;
+}
+
+#top-row-form > div,
+#middle-row-form > div,
+#bottom-row-form > div {
+    margin-top: 2rem;
+}
+
+h1 {
+    margin-top: 2rem;
 }
 
 label {
+    display: block;
+}
 
+button {
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    background-color: var(--accent-colour);
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+a,
+a:visited {
+    color: var(--accent-colour);
+}
+
+#top-row-form,
+#middle-row-form,
+#bottom-row-form {
+    display: flex;
+}
+
+input:valid {
+    border-color: green;
+    background-color: lightgreen;
+    border-width: 2px;
+}
+
+input:invalid {
+    border-color: red;
+    background-color: rgb(255, 63, 63);
+    border-width: 2px;
+}
+
+input:placeholder-shown {
+    border-color: black;
+    background-color: white;
+    border-width: 1px;
+}
+
+input:focus {
+    border-color: black;
+    background-color: white;
+    border-width: 3px;
 }

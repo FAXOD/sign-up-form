@@ -10,31 +10,48 @@
 <body>
     <img id="lhs" src="liverpool-waterfront.jpg" alt="Photo of the Albert Dock in Liverpool">
     <div id="rhs">
-        <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams. <br>
-            Sign up now to get started.<br><br>You <em>know</em> you want to.
+        <p id="top-text">Whether it's music, football or even the nightlife, Liverpool has something for everyone.
+            Take a ferry across the Mersey, visit the famous home of Liverpool FC, learn the story of the Fab Four
+            in the Beatles Story and be finished in time to experience the vibrant bars & restaurants that make 
+            Liverpool the cultural hub it is today.
+            <br>
+            <br>
+            What's stopping you?
         </p>
         <form action="https://blabla.com/" method="post" id="sign-up-form">
-            <h1>Let's do this!</h1>
+            <h1>Inquire about packages today!</h1>
 
-            <div>
-                <label for="first-name" hidden>First Name:</label>
-                <input id="first-name" name="first-name" placeholder="First Name..."/>
-                <label for="surname" hidden>Surname:</label>
-                <input id="surname" name="surname" placeholder="Surname..."/>
+            <div id="top-row-form">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input id="first-name" name="first-name" placeholder="First Name..." required />
+                </div>
+                <div>
+                    <label for="surname">Surname:</label>
+                    <input id="surname" name="surname" placeholder="Surname..." required />
+                </div>
             </div>
 
-            <div>
-                <label for="email" hidden>Email Address:</label>
-                <input type="email" name="email" id="email" placeholder="email@address.com..."/>
-                <label for="tel" hidden>Contact Number:</label>
-                <input type="tel" name="tel" id="tel" placeholder="0121 670 1234..."/>
+            <div id="middle-row-form">
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="email" id="email" placeholder="email@address.com..." required />
+                </div>
+                <div>
+                    <label for="tel">Contact Number:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="0121 670 1234..." required />
+                </div>
             </div>
 
-            <div>
-                <label for="password" hidden>Password:</label>
-                <input type="password" name="password" id="password" placeholder="password..."/>
-                <label for="confirm-password" hidden>Confirm Password:</label>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="password..."/>
+            <div id="bottom-row-form">
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="password..." required />
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="password..." required />
+                </div>
             </div>
         </form>
         <div id="btn-footer">
