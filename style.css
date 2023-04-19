@@ -2,11 +2,17 @@
     --accent-colour: rgba(169, 206, 255, 0.795);
 }
 
+@font-face {
+    font-family: "Questrial-Regular";
+    src: url(Questrial-Regular.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
     display: flex;
+    font-family: Questrial-Regular, sans-serif;
 }
 
 #lhs {
@@ -14,6 +20,14 @@ body {
     padding: 0;
     height: 100vh;
     width: 34.5vw;
+    position: relative;
+}
+
+#lhs-img {
+    margin: 0;
+    height: 100vh;
+    width: 34.5vw;
+    position:fixed;
 }
 
 #rhs {
@@ -35,7 +49,7 @@ body {
 form {
     background-color: white;
     width:60.5vw;
-    height:40vh;
+    height:max(40vh, 26rem);
     background-color: var(--accent-colour);
     padding-left: 5vw;
     padding-bottom: 2vh;
@@ -70,6 +84,7 @@ input {
 
 h1 {
     margin-top: 2rem;
+    font-size: max(30px, 2.6vw);
 }
 
 label {
