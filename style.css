@@ -1,5 +1,6 @@
 :root {
-    --accent-colour: rgba(169, 206, 255, 0.795);
+    --accent-colour: rgb(240, 240, 240);
+    --btn-colour: rgb(0, 109, 143);
 }
 
 @font-face {
@@ -65,6 +66,7 @@ form {
 }
 
 input {
+    border: none;
     margin: 0;
     height: 2rem;
     width: 16rem;
@@ -96,7 +98,7 @@ button {
     height: 4rem;
     font-size: 1.7rem;
     border-radius: 8px;
-    background-color: var(--accent-colour);
+    background-color: var(--btn-colour);
     font-weight: bolder;
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -104,7 +106,7 @@ button {
 
 a,
 a:visited {
-    color: var(--accent-colour);
+    color: var(--btn-colour);
 }
 
 #top-row-form,
@@ -113,10 +115,35 @@ a:visited {
     display: flex;
 }
 
+span {
+    position: absolute;
+}
+
+#first-name + span::after,
+#surname + span::after {
+    content: "* No special characters or numbers *";
+}
+
+#email + span::after {
+    content: "* Please enter a valid email address *";
+}
+
+#tel + span::after {
+    content: "* Phone number can start with '+' but otherwise must contain only numbers*";
+}
+
+#email:focus + span::after {
+    visibility: hidden;
+}
+
 input:valid {
     border-color: green;
     background-color: lightgreen;
     border-width: 2px;
+}
+
+input:valid + span::after {
+    visibility: hidden;
 }
 
 input:invalid {
@@ -125,14 +152,25 @@ input:invalid {
     border-width: 2px;
 }
 
+input:invalid + span::after {
+    position: relative;
+    visibility: visible;
+    top: 0.1rem;
+    font-size: 0.8em;
+    color:red;
+}
+
 input:placeholder-shown {
     border-color: black;
     background-color: white;
     border-width: 1px;
 }
 
+input:placeholder-shown + span::after {
+    visibility: hidden;
+}
+
 input:focus {
-    border-color: black;
+    border: 3px black solid;
     background-color: white;
-    border-width: 3px;
 }
