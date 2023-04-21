@@ -149,6 +149,7 @@ a:visited {
 
 span {
     position: absolute;
+    visibility: hidden;
 }
 
 #first-name + span::after,
@@ -164,42 +165,28 @@ span {
     content: "* Phone number can start with '+' but otherwise must contain only numbers*";
 }
 
-#email:focus + span::after {
-    visibility: hidden;
-}
-
-input:valid {
+.valid {
     border-color: green;
     background-color: lightgreen;
     border-width: 2px;
 }
 
-input:valid + span::after {
+.valid + span::after {
     visibility: hidden;
 }
 
-input:invalid {
+.invalid {
     border-color: red;
     background-color: rgb(255, 63, 63);
     border-width: 2px;
 }
 
-input:invalid + span::after {
+.invalid + span::after {
     position: relative;
     visibility: visible;
     top: 0.1rem;
     font-size: 0.8em;
     color:red;
-}
-
-input:placeholder-shown {
-    border-color: black;
-    background-color: white;
-    border-width: 1px;
-}
-
-input:placeholder-shown + span::after {
-    visibility: hidden;
 }
 
 input:focus {
