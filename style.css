@@ -78,6 +78,7 @@ img + div {
 #liverbird-right {
     height: min(6rem, 5vw);
     position:relative;
+    bottom: 5%;
 }
 
 #liverbird-left {
