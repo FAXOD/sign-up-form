@@ -54,6 +54,39 @@ form {
     background-color: var(--accent-colour);
     padding-left: 5vw;
     padding-bottom: 2vh;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+img + div {
+    width: 34.5vw;
+    height: 15%;
+    background-color: rgba(0, 0, 0, 50%);
+    color: white;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#liverbird-left,
+#liverbird-right {
+    height: 6rem;
+    position: absolute;
+    bottom: 2rem;
+}
+
+#liverbird-left {
+    left: 0rem;
+}
+
+#liverbird-right {
+right: 0rem;
 }
 
 #btn-footer {
