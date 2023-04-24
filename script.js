@@ -1,28 +1,60 @@
-const myform = document.getElementById('sign-up-form');
-myform.noValidate = true;
+const form = document.getElementById('sign-up-form');
+const firstName = document.getElementById('first-name');
+const surname = document.getElementById('surname');
+const email = document.getElementById('email');
+const tel = document.getElementById('tel');
+const pwd1 = document.getElementById('password');
+const pwd2 = document.getElementById('confirm-password');
+form.noValidate = true;
 
-myform.addEventListener('submit', validateForm);
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    validateForm();
+});
 
-function validateForm(e) {
-    const form = e.target;
+function validateForm() {
+    const firstNameValue = firstName.value.trim();
+    const surnameValue = surname.value.trim();
+    const emailValue = email.value.trim();
+    const telValue = tel.value.trim();
+    const pwd1Value = pwd1.value;
+    const pwd2Value = pwd2.value;
 
-    if (form.checkValidity()) {
-        
+    const formInputs = Array.from(form.elements);
+
+    for (i = 0; i < 4; i++) {
+        if (formInputs[i].checkValidity()) {
+            formInputs[i].classList.add('valid');
+            formInputs[i].classList.remove('invalid');
+        } else {
+            formInputs[i].classList.add('invalid');
+            formInputs[i].classList.remove('valid');
+        }
+    }
+
+    if (pwd1Value === pwd2Value) {
+        if (pwd1.checkValidity()) {
+            pwd1.classList.add('valid');
+            pwd1.classList.remove('invalid');
+            pwd2.classList.add('valid');
+            pwd2.classList.remove('invalid');
+        } else {
+            pwd1.classList.add('invalid');
+            pwd1.classList.remove('valid');
+            pwd2.classList.add('invalid');
+            pwd2.classList.remove('valid');
+        }
     } else {
-        e.preventDefault();
-        Array.from(form.elements).forEach(i => {
-            if (i.checkValidity()) {
-                i.classList.remove('invalid');
-                i.classList.add('valid')
-            } else {
-                i.classList.remove('valid');
-                i.classList.add('invalid');
-            }
+        pwd1.classList.add('invalid');
+        pwd1.setAttribute('id', 'pw-mismatch');
+        pwd1.classList.remove('valid');
+        pwd2.classList.add('invalid');
+        pwd2.classList.remove('valid');
+        pwd1.value = "";
+        pwd2.value = "";
+    }
 
-            if (i.classList.contains('btn')) {
-                i.classList.remove('valid');
-                i.classList.remove('invalid');
-            }
-        })
+    if (form.getElementsByClassName('valid').length === 6) {
+        form.submit();
     }
 }

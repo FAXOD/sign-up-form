@@ -31,6 +31,21 @@ body {
     position:fixed;
 }
 
+#photo-footer {
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    width: 34.5vw;
+    text-align: center;
+    font-size: min(1vw, 2rem);
+}
+
+.photo-link,
+.photo-link:visited {
+    color: white;
+    font-weight: 800;
+}
+
 #rhs {
     display: flex;
     flex-direction: column;
@@ -164,6 +179,14 @@ span {
 
 #tel + span::after {
     content: "* Phone number can start with '+' but otherwise must contain only numbers*";
+}
+
+#password + span::after {
+    content: "* Password must be at least 6 characters long *";
+}
+
+#pw-mismatch + span::after {
+    content: "* Passwords do not match *";
 }
 
 .valid {

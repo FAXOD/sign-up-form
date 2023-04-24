@@ -12,6 +12,7 @@
     <div id="lhs">
         <img id="lhs-img" src="liverpool-waterfront.jpg" alt="Photo of the Albert Dock in Liverpool">
         <div class="title-card"><img id="liverbird-left" src="liverbird-nobg.png" alt="">Liverpool<img id="liverbird-right" src="liverbird-nobg.png" alt=""></div>
+        <p id="photo-footer">photo credit: Photo by <a href="https://unsplash.com/@jbp_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-link">Jorge Percival</a> on <a href="https://unsplash.com/photos/WuKNL0R8vAI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-link">Unsplash</a></p>
     </div>
     <div id="rhs">
         <p id="top-text">Whether it's music, football or even the nightlife, Liverpool has something for everyone.
@@ -54,8 +55,8 @@
             <div id="bottom-row-form">
                 <div>
                     <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" placeholder="password..." required />
-                    <span></span>
+                    <input type="password" name="password" id="password" placeholder="password..." minlength="6" required />
+                    <span id="password-error"></span>
                 </div>
                 <div>
                     <label for="confirm-password">Confirm Password:</label>
